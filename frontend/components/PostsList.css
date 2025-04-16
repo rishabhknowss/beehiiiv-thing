@@ -1,0 +1,128 @@
+/* components/PostsList.css */
+.posts-list {
+    margin-top: 30px;
+  }
+  
+  .posts-list h2 {
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin-bottom: 10px;
+  }
+  
+  .posts-list > p {
+    color: #718096;
+    margin-bottom: 20px;
+  }
+  
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .post-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid transparent;
+  }
+  
+  .post-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-card.selected {
+    border-color: #4299e1;
+    background-color: #ebf8ff;
+  }
+  
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  .post-header h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #2d3748;
+    line-height: 1.4;
+    flex: 1;
+  }
+  
+  .post-status {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 20px;
+    text-transform: uppercase;
+  }
+  
+  .post-status.draft {
+    background-color: #e2e8f0;
+    color: #4a5568;
+  }
+  
+  .post-status.confirmed {
+    background-color: #c6f6d5;
+    color: #2f855a;
+  }
+  
+  .post-status.archived {
+    background-color: #fed7d7;
+    color: #c53030;
+  }
+  
+  .post-subtitle {
+    font-size: 0.95rem;
+    color: #718096;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  
+  .post-meta {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.85rem;
+  }
+  
+  .meta-label {
+    color: #718096;
+    margin-bottom: 4px;
+  }
+  
+  .meta-value {
+    font-weight: 600;
+    color: #4a5568;
+  }
+  
+  .post-selection {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4299e1;
+  }
+  
+  .post-card.selected .post-selection {
+    color: #2c5282;
+  }
+  
+  .no-posts {
+    text-align: center;
+    padding: 40px;
+    color: #a0aec0;
+    font-style: italic;
+  }
